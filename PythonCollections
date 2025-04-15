@@ -1,0 +1,100 @@
+# Lists
+# Positive indexing
+Student_list = ["John", "Kevin", "Kyalo", "MaryAnne", "Ian"]
+print(Student_list)
+print("Accessing list items using their indexes")
+print(Student_list[0])  # Accessing the first item in the list
+
+# Negative indexing
+print("Negative indexing")
+print(Student_list[-1])  # Accessing the last item in the list
+
+# Index ranges
+print(Student_list[1:3])
+print(Student_list[:3])  # Accessing the first three items in the list
+
+# Accessing all items from index 1 to the end of the list
+print(Student_list[1:])
+print(Student_list[::2])  # Accessing every second item in the list
+print(Student_list[:-1])  # Accessing all items except the last one
+print(Student_list[-3:])  # Accessing the last three items in the list
+
+# Replacing/Changing values in a list
+Student_list[0] = "Ivy"
+print(Student_list[0])
+
+# looping through a list
+# for item in list:
+#     print(item)
+for student in Student_list:
+    print(student)
+for student in Student_list:
+    print("Student name :", student)
+
+# Enumerating a list
+# for index, item in enumerate(list):
+#     print(index, item)
+for index, student in enumerate(Student_list, start=1):
+    print(index, student)
+
+# Checking if an item exists in a list
+# if item in list:
+#     print("Item exists")
+if "Kevin" in Student_list:
+    print("Kevin is in the list")
+if "Jason" in Student_list:
+    print("Jason is in the list")
+else:
+    print("Jason is not in the list")
+# if item not in list:
+# #     print("Item does not exist")
+# if "Ian" not in Student_list:
+#     print("Ian is absent")
+
+# Checking the length of a list
+# print(len(list))
+print("The length of the list is", len(Student_list))
+print(len(Student_list))
+
+# Adding items to a list
+# list.append(item)
+Student_list.append("John")
+print(Student_list)
+# Adding an item to a specific index in a list
+# list.insert(index, item)
+Student_list.insert(2, "Elsie")
+print(Student_list)
+
+# Removing items from a list
+# list.remove(item)
+Student_list.remove("John")
+print(Student_list)
+# list.pop(index) # Removes the item at the specified index
+# Student_list.pop(2)
+# print(Student_list)
+Student_list.pop(0)
+print(Student_list)
+Student_list.pop(-1)  # Removes the last item in the list
+print(Student_list)
+Student_list.pop()
+print(Student_list)
+# list.clear() # Removes all items from the list/Empties the list
+# Student_list.clear()  ##
+# print(Student_list)   ##
+# Deletes the list
+# del item # Deletes the item at the specified index
+# del list - Deletes the entire list
+del Student_list[0]  # Deletes the first item in the list
+print(Student_list)
+
+# Copying a list
+# list.copy() # Creates a shallow copy of the list
+# list2 = list.copy() creates a new list with the same items as the original list
+students2 = Student_list.copy()
+print(students2)
+students3 = list(students2)
+print(students3)
+students3.append("Helsing")
+print(students3)
+students3.insert(2, "Jupyter")
+print(students3)
