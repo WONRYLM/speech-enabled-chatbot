@@ -98,3 +98,46 @@ students3.append("Helsing")
 print(students3)
 students3.insert(2, "Jupyter")
 print(students3)
+
+# Joining lists   joining/concatenating     + shows concatenation
+list1 = ("Kevin","MaryAnn","John")
+list2 = ("Ian","Douglas","Ivy")
+list3 = list1 + list2
+print(list3)
+list1 += list2
+print(list1)
+list1 = list1 + list2
+print(list1)
+# For item in list:
+    # list1.append(item)
+# print(list)
+# for  item in list2:
+#     list1.append(item) 
+# print(list1)
+
+datascience = ["Kevin","MaryAnn","John"]
+graphicdesign = ["Ian","Douglas","Ivy"]
+students = datascience + graphicdesign   
+                                      # Backup and delete list 1 -
+                                      #  copy then clear
+# datascience.copy()
+# datascience.clear()   #These work , I commented since it interfered with the code after it
+# print(datascience)
+                                      # or backup = list.copy()
+backup = datascience.copy()
+datascience.clear()
+print(datascience)  
+print(backup)
+
+# sets
+students = {'MaryAnn','John','Kevin'}
+print(students)
+    #looping through a set
+for x in students:
+    print(x)
+    #checking if an item is present in the set.  Answers are always boolean.
+print("Ivy" in students)    
+    #updating a set 
+mynumber = {1,8,3,6}
+students.update(mynumber)
+print(students)
