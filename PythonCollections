@@ -141,3 +141,9 @@ print("Ivy" in students)
 mynumber = {1,8,3,6}
 students.update(mynumber)
 print(students)
+    #removing items from a set .remove .dicard .pop - removes the last item in the list
+    #deleting lists  del - deletes the whole list
+    #intersection
+    #intersection_update - Keeps items that are duplicate/present in both sets
+    #symmetric_difference_update - keeps the values/elements not present in both sets
+    #symmetric_difference - returns a new set - combines both sets without returning duplicates

@@ -2,12 +2,12 @@ student_name = input("Please enter your name: ")
 student_id = input("Please enter your student ID: ")
 Grade = " "
 while True:
-    x = int(input("Please enter your marks: "))
+    x = input("Please enter your marks: ")
 
     if not input.isdigit():
         print("Input must be a number.")
         continue
-
+    x = int(x)    
     if x >= 0 and x <= 100:
         print("Input correct")
         if x >= 95:
