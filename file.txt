@@ -1,0 +1,7 @@
+I'm learning DataScience at GoMyCode
+Opening a file
+Managing files
+Closing a files
+Editing a files
+Deleting a file 
+

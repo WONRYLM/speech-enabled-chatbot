@@ -87,3 +87,10 @@ print(name)
 Radius = float(input("Please enter the radius : "))
 Area = 3.142 * (Radius ** 2)
 print(f"The area of the circle is {Area} square units")
+
+#Numpy
+import numpy as np
+
+arr = np.array([10, 20, 30, 40])
+print(arr[0])     # 10
+print(arr[-1])    # 40
