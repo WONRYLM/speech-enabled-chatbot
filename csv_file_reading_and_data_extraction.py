@@ -3,7 +3,7 @@ import csv
 # Reading lines from the CSV file
 def read_file():
     data = []                                   # This will store all rows from the CSV in a list
-    with open("2score.csv", "r") as file:
+    with open("2score.csv", "r") as file:       # With open Closes the file automatically//if not close file manually
         reader = csv.DictReader(file)           # Reads the rows 
         for row in reader:                      # Loops through each row in the CSV file
             print(row["name"], row["score"])    # Prints each name and score      
@@ -12,7 +12,7 @@ def read_file():
 
 # Dictionary
 def score(data):
-    scores = {}                     # Empty dictionary to score the key value pairs - name and score
+    scores = {}                     # Empty dictionary to store the key value pairs - name and score
     for row in data:                # Loop through each row to access data
         name = row["name"]          # Get the name from the row
         score = int(row["score"])   # Convert score to an integer

@@ -28,13 +28,16 @@ print('='*40)
 
 #3: Data Cleaning
 #Fill missing Age and Salary with the column mean
-print('Filling Missing Age With Mean :\n ',employees['Age'].fillna(employees['Age'].mean))
-print('Filling Missing Salary With Mean :\n ',employees['Salary'].fillna(employees['Salary'].mean))
+Mean_age = employees['Age'].mean()
+Mean_salary = employees['Salary'].mean()
+print('Filling Missing Age With Mean :\n ',employees['Age'].fillna(Mean_age),inplace=True)
+print('Filling Missing Salary With Mean :\n ',employees['Salary'].fillna(Mean_salary),inplace=True)
 print('='*40)
 
 #Rename the column "Performance" to "Rating"
 print('Renaming Performance to Rating : \n ')
-employees = employees.rename(columns = {'Performance':'Rating'})
+employees = employees.rename(columns = {'Performance':'Rating'},inplace=True)
+print(employees)
 print('='*40)
 
 #Remove duplicate rows (add one duplicate row intentionally to try it)
@@ -64,13 +67,17 @@ print('='*40)
 
 #Discussion Prompts
 #What are the risks of missing data? How did you handle it?
-
+    # May lead to innacurate results.
+    #Filled missing values with mean of the respective column.
 
 #Why would you choose to use a DataFrame here instead of individual Series?
-
+    #It allows for efficient manipulation of data with multiple columns, 
+    # unlike individual Series where manipulation of data over multiple series might be tedious and error prone .
 
 #What insights can be drawn from this dataset?
-
+    # 1.Most IT department employees have good or excellent performance.
+    # 2.The average salary is highest in the Finance department.
+    # 3.There are 2 employees with an "Excellent" rating.
 
 
 # # DataFrame

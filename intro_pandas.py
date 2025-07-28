@@ -23,7 +23,7 @@ import pandas as pd
 
 
 #Assignment
-# 1
+# 1 Create a Series called weekly_sales
 print('='*40)
 weekly_sales = pd.Series([150000, 120000, 95000, None, 50000], index = ['Electronics','Clothing','Groceries','Furniture','Stationery'])
 print('Weekly Sales :',weekly_sales)
@@ -50,26 +50,26 @@ print('='*40)
 #no.3: Data Cleaning
 #Identify any missing values using .isnull()
 missing_values = weekly_sales.isnull()
-print(missing_values)
+print('Missing Values :',missing_values)
 print('='*40)
 #Replace missing values with weekly_sales.mean()
 weekly_sales.mean()
-replaced_missing_values = weekly_sales.mean()
+replaced_missing_values = weekly_sales.fillna(weekly_sales.mean())
 print("Replaced missing values :",replaced_missing_values)
 print('='*40)
 
 #4: Analysis
 #Calculate the total sales using .sum()
-total_sales = weekly_sales.sum()
+total_sales = replaced_missing_values.sum()
 print("Total Sales :",total_sales)
 print('='*40)
 
 #Calculate the average sales using .mean()
-average_sales = weekly_sales.mean()
+average_sales = replaced_missing_values.mean()
 print("Average Sales :", average_sales)
 print('='*40)
 
 #Find departments with sales greater than 100,000
-sales_above_100k = weekly_sales > 100000
+sales_above_100k = replaced_missing_values > 100000
 print("Departments with sales greater than 100,000 :\n",sales_above_100k)
 print('='*40)
