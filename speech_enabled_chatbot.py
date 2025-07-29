@@ -6,19 +6,17 @@ import nltk
 import numpy as np
 import string
 import speech_recognition as sr
-import pyttsx3
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import platform
+import os
 
 # ==========================
 # 2. Download NLTK Resources
 # ==========================
 nltk.download('punkt')
 nltk.download('wordnet')
-import os
-
 nltk.data.path.append(os.path.join(os.getcwd(), 'nltk_data'))
+
 # ==========================
 # 3. Load and Prepare Data
 # ==========================
@@ -55,23 +53,10 @@ def chatbot_response(user_input):
     else:
         response = sent_tokens[idx]
     sent_tokens.pop()
-    if use_tts:
-        speak(response)
     return response
 
 # ==========================
-# 5. Text-to-Speech
-# ==========================
-def speak(text):
-    engine = pyttsx3.init()
-    engine.say(text)
-    engine.runAndWait()
-
-# Disable TTS on Streamlit Cloud or unsupported OS
-use_tts = platform.system() in ["Windows", "Darwin", "Linux"] and not st.runtime.exists()
-
-# ==========================
-# 6. Speech Recognition
+# 5. Speech Recognition
 # ==========================
 def transcribe_speech():
     r = sr.Recognizer()
@@ -89,10 +74,10 @@ def transcribe_speech():
             return "Listening timed out. Please try again."
 
 # ==========================
-# 7. Streamlit App
+# 6. Streamlit App
 # ==========================
-st.set_page_config(page_title="Speech Chatbot", page_icon="🧠")
-st.title("🤖 Speech-Enabled Chatbot")
+st.set_page_config(page_title="Speech Chatbot", page_icon="")
+st.title("Speech-Enabled Chatbot")
 st.write("Choose your input method:")
 
 # Session state for chat history
@@ -118,11 +103,7 @@ elif input_method == 'Speech':
 
 # Display chat history
 if st.session_state.history:
-    st.write("### 📝 Chat History:")
+    st.write("### Chat History:")
     for speaker, message in st.session_state.history:
         st.write(f"**{speaker}:** {message}")
 # ==========================
-# 8. Run the Streamlit app  
-# ==========================
-# if __name__ == "__main__":
-#     st.write("Run this app using `streamlit run speech_enabled_chatbot.py` in your terminal.")
