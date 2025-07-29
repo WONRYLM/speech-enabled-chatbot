@@ -1,5 +1,5 @@
 streamlit
-opencv-python-headless
-numpy
-Pillow
-
+nltk
+speechrecognition
+scikit-learn
+pyttsx3

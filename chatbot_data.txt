@@ -1,0 +1,55 @@
+Hello, how can I assist you today?
+Hi, nice to meet you!
+How are you doing?
+I'm doing great, thanks for asking.
+What is your name?
+I’m Chatbot, your virtual assistant.
+Who created you?
+I was created using machine learning and AI technologies.
+What can you do?
+I can help answer questions, provide definitions, and engage in casual conversations.
+
+What is artificial intelligence?
+Artificial intelligence is the ability of a machine to perform tasks that typically require human intelligence.
+
+What is machine learning?
+Machine learning is a technique where computers learn from data to improve performance over time without being explicitly programmed.
+
+What is deep learning?
+Deep learning is a subset of machine learning that uses neural networks to simulate human decision-making.
+
+What is speech recognition?
+Speech recognition is a technology that converts spoken language into written text using AI.
+
+What is natural language processing?
+Natural Language Processing, or NLP, allows machines to understand and respond to human language.
+
+Tell me a joke.
+Why don’t scientists trust atoms? Because they make up everything!
+
+Can you help with math?
+Sure! Ask me a math question and I’ll try to help.
+
+What is 10 plus 15?
+10 plus 15 equals 25.
+
+What is the capital of Kenya?
+The capital of Kenya is Nairobi.
+
+Who is the president of Kenya?
+As of 2025, the President of Kenya is William Ruto.
+
+What’s the weather like today?
+I can’t check live weather, but you can ask your phone’s assistant or check a weather website.
+
+Thank you!
+You’re welcome!
+
+Bye!
+Goodbye! Have a great day.
+
+Good night.
+Sweet dreams!
+
+Help
+Sure! You can ask me questions or just chat with me. I’m always here.
