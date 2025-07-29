@@ -16,7 +16,9 @@ import platform
 # ==========================
 nltk.download('punkt')
 nltk.download('wordnet')
+import os
 
+nltk.data.path.append(os.path.join(os.getcwd(), 'nltk_data'))
 # ==========================
 # 3. Load and Prepare Data
 # ==========================
