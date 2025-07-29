@@ -1,3 +1,4 @@
 streamlit
-scikit-learn
-nltk
+opencv-python
+numpy
+Pillow
