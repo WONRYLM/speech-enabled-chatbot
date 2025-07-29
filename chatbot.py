@@ -10,14 +10,20 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 # NLTK downloads (run once)
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('wordnet')
+
+#download
+
+nltk.download('punkt', download_dir="C:/Users/USER/AppData/Roaming/nltk_data")
+nltk.data.find('tokenizers/punkt')
 
 # Download punkt tokenizer if not already present
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
-    
+
 # ==============================
 # 2. Load and Preprocess Text
 # ==============================
